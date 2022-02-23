@@ -8,13 +8,11 @@
   height: 90vh;
   display: flex;
   justify-content: center;
-  background-color: antiquewhite;
 }
 .userlist {
-  width: 70%;
+  width: 75%;
   height: 90vh;
   padding: 20px;
-  background-color: lightblue;
   display: flex;
 }
 
@@ -22,15 +20,13 @@ table {
   width: 100%;
 }
 .userinfo {
-  width: 30%;
+  width: 25%;
   height: 100vh;
-
-  background-color: lightpink;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 20px 5px 20px 10px;
 }
 
 .user_name {
@@ -63,7 +59,7 @@ table {
 .userdetails {
   width: 100%;
   height: 60vh;
-  background-color: cornflowerblue;
+  box-shadow: 0 0 5px 5px gray;
   border-radius: 10%;
 }
 
@@ -86,12 +82,7 @@ table {
 .namedetails {
   display: flex;
 }
-.namedetails sup {
-  height: 5px;
-  width: 5px;
-  background-color: black;
-  border-radius: 50%;
-}
+
 .userdetails1 button {
   background-color: goldenrod;
   color: #fff;

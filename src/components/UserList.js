@@ -1,10 +1,10 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "../App.css";
 import { listUsers } from "../redux/actions/UserListAction";
 import UserInfo from "./UserInfo";
 import Pagination from "./Pagination";
+import api from "../api/Userapi";
 
 const UserList = () => {
   const users = useSelector((state) => state.allUsers.users);
@@ -35,7 +35,7 @@ const UserList = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("https://reqres.in/api/users?page=1");
+      const response = await api.get("users?page=${1}");
       setPageCount(response.data.total);
       dispatch(listUsers(response.data.data));
     } catch (error) {
@@ -86,7 +86,11 @@ const UserList = () => {
                         <td>
                           <div className="user_status">
                             {index === 0 ? (
-                              <div>Active</div>
+                              <div
+                                style={{ color: "green", fontWeight: "bold" }}
+                              >
+                                Active
+                              </div>
                             ) : (
                               <select onChange={handleChangeStatus}>
                                 <option value="Active">Active</option>

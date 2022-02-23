@@ -12,7 +12,7 @@ const UserInfo = (props) => {
         </div>
         <div className="namedetails">
           <h4>{first_name}&nbsp;</h4>
-          <sup></sup>
+          <sup style={{ color: "green", fontWeight: "bold" }}>*</sup>
         </div>
 
         <p>{email}</p>

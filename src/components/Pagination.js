@@ -1,17 +1,15 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import axios from "axios";
 import { listUsers } from "../redux/actions/UserListAction";
 import ReactPaginate from "react-paginate";
+import api from "../api/Userapi";
 
 const Pagination = (props) => {
   const dispatch = useDispatch();
 
   const fetchComments = async (currentPage) => {
     try {
-      const res = await axios.get(
-        `https://reqres.in/api/users?page=${currentPage}`
-      );
+      const res = await api.get(`users?page=${currentPage}`);
       // console.log("pagination", res.data);
       return res.data.data;
     } catch (err) {
