@@ -66,7 +66,7 @@ const UserList = () => {
                     <th style={{ width: "40%" }}>Name</th>
                     <th style={{ width: "30%" }}>Status</th>
                     <th style={{ width: "30%" }}>Owner</th>
-                    <th style={{ width: "10%" }}>Icon</th>
+                    {/* <th style={{ width: "10%" }}>Icon</th> */}
                   </tr>
                 </thead>
                 {users.map((user, index) => {
